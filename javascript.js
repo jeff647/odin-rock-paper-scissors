@@ -29,7 +29,6 @@ function playRound(playerSelection, computerSelection) {
     else if (((capitalizedPlayerSelection == "Rock") && (computerSelection == "Scissors")) || ((capitalizedPlayerSelection == "Paper") && (computerSelection == "Rock")) || (capitalizedPlayerSelection == "Scissors") && (computerSelection == "Paper")) {
         return [1, `Win! ${stringOutput}`];
     }
-
     // Lose condition
     else {
         return [-1, `Lose! ${stringOutput}`];
@@ -62,7 +61,7 @@ function game() {
         console.log(`Round ${round + 1} results: ${roundResult[1]}`);
     }
     console.log(`Wins: ${wins} Ties: ${ties} Losses: ${losses}`)
-    // End result tie
+    // End Game Result 
     if (wins == losses) {
         return `Game ended in a tie!`
     }
