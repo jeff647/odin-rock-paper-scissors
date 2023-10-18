@@ -1,10 +1,7 @@
 const choice = ["Rock", "Paper", "Scissors"]
 
-// Rock 1 paper 2 scissors 3 % 2
-
-
 function getRandomInt(max) {
-    // Returns a random integer of 0 up to but not including max.
+    // Returns a random integer of 0 up to but not including max. Using to randomize index for choice array.
     return Math.floor(Math.random() * max);
 }
 
@@ -38,7 +35,6 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     // Keep score.
     let wins = losses = ties = 0;
-
     // Play 5 round  of playRound games while keeping score and report winner or loser at the end.
     for (let round = 0; round < 5; round++) {
         console.log(`Wins: ${wins} Ties: ${ties} Losses: ${losses}`)
@@ -72,9 +68,5 @@ function game() {
         return `Game ended in a loss!`
     }
 }
-
-// const playerChoice = "scissors";
-// const computerChoice = getComputerChoice();
-// console.log(playRound(playerChoice, computerChoice)[1]);
 
 console.log(game())
