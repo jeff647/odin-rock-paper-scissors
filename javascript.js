@@ -44,7 +44,9 @@ const bodyNode = document.body;
 
 function game(result) {
   // Update global variables wins, losses, and ties based on the return index [0] value of function playRound (1,-1,0) respectively.
-  const resultDiv = document.querySelector("#result");
+  const scoreDiv = document.querySelector("#score-tracker");
+  const resultHeading = document.querySelector("#result-heading");
+  resultHeading.textContent = "";
   // Round Tie
   if (result == 0) {
     ties++;
@@ -57,18 +59,15 @@ function game(result) {
   else {
     losses++;
   }
-  resultDiv.textContent = `Wins: ${wins} Ties: ${ties} Losses: ${losses}`;
+  scoreDiv.textContent = `Wins: ${wins} Ties: ${ties} Losses: ${losses}`;
 
-  const resultHeading = document.createElement("h3");
   // End Game Result
   if (wins == 5) {
     resultHeading.textContent = "Player Wins!";
-    bodyNode.insertBefore(resultHeading, bodyNode.childNodes[0]);
-    wins = losses = ties = 0;        
+    wins = losses = ties = 0;
   } else if (losses == 5) {
     resultHeading.textContent = "Player Lose!";
-    bodyNode.insertBefore(resultHeading, bodyNode.childNodes[0]);
-    wins = losses = ties = 0;  
+    wins = losses = ties = 0;
   }
 }
 
@@ -82,6 +81,4 @@ buttons.forEach((button) => {
   });
 });
 
-
-const roundResultDiv = document.createElement("div");
-bodyNode.insertBefore(roundResultDiv, bodyNode.childNodes[1]);
+const roundResultDiv = document.querySelector("#round-result");
