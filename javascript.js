@@ -46,7 +46,9 @@ function game(result) {
   // Update global variables wins, losses, and ties based on the return index [0] value of function playRound (1,-1,0) respectively.
   const scoreDiv = document.querySelector("#score-tracker");
   const resultHeading = document.querySelector("#result-heading");
+  // Reset result text and effects.
   resultHeading.textContent = "";
+  bodyNode.style.backgroundColor = "transparent";
   // Round Tie
   if (result == 0) {
     ties++;
@@ -65,9 +67,11 @@ function game(result) {
   if (wins == 5) {
     resultHeading.textContent = "Player Wins!";
     wins = losses = ties = 0;
+    bodyNode.style.backgroundColor = "green";
   } else if (losses == 5) {
     resultHeading.textContent = "Player Lose!";
     wins = losses = ties = 0;
+    bodyNode.style.backgroundColor = "red";
   }
 }
 

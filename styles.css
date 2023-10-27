@@ -1,3 +1,47 @@
-body{
-    text-align: center;
+body {
+  text-align: center;
+  /* min-height: 100vh; */
+}
+
+div#result-heading,
+div#round-result,
+div#score-tracker,
+div#selection,
+div#round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+div#result-heading {
+  font-size: 2em;
+  height: 2.5em;
+}
+
+div#round-result,
+div#score-tracker {
+  font-size: 1.5em;
+  height: 2em;
+}
+
+div#round {
+  height: 50%;
+  background-color: gray;
+}
+
+div#selection,
+div#round-result {
+  position: relative;
+  top: 35vh;
+}
+
+button[name="rps"]{
+  transition: all 1.5s;
+}
+
+button[name="rps"]:hover{
+  /* transform: rotate(360deg); */
+  scale: 2;
+  background-color: yellow;
 }
