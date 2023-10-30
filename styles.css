@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  /* min-height: 100vh; */
 }
 
 div#result-heading,
@@ -36,12 +35,11 @@ div#round-result {
   top: 35vh;
 }
 
-button[name="rps"]{
+button[name="rps"] {
   transition: all 1.5s;
 }
 
-button[name="rps"]:hover{
-  /* transform: rotate(360deg); */
+button[name="rps"]:hover {
   scale: 2;
   background-color: yellow;
 }
